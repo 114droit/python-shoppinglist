@@ -26,12 +26,13 @@ while True:
     print("1. Artikel zur Einkaufsliste hinzufügen")
     print("2. Einkaufsliste anzeigen")
     print("3. Programm beenden")
-    choice = int(input("Was möchtest du tun?(1/2/3)"))
-    if choice == 1:
+    choice = input("Was möchtest du tun?(1/2/3)")
+    if choice == "1":
         add_item()
-    elif choice == 2:
+    elif choice == "2":
         show_shoppinglist()
-    elif choice == 3:
+    elif choice == "3":
         print("Programm wird beendet! Auf Wiedersehen")
         break
-    
+    elif choice:
+        print("Ungültige Auswahl. Bitte wähle 1,2 0der 3")
