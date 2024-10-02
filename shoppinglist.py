@@ -20,19 +20,22 @@ def show_shoppinglist():
         print("Deine Einkaufsliste ist leer")
 
 # Main Funktion
-while True:
-    print("\n")
-    print("-----Einkaufsliste-----")
-    print("1. Artikel zur Einkaufsliste hinzufügen")
-    print("2. Einkaufsliste anzeigen")
-    print("3. Programm beenden")
-    choice = input("Was möchtest du tun?(1/2/3)")
-    if choice == "1":
-        add_item()
-    elif choice == "2":
-        show_shoppinglist()
-    elif choice == "3":
-        print("Programm wird beendet! Auf Wiedersehen")
-        break
-    elif choice:
-        print("Ungültige Auswahl. Bitte wähle 1,2 0der 3")
+def main():
+    while True:
+        print("\n")
+        print("-----Einkaufsliste-----")
+        print("1. Artikel zur Einkaufsliste hinzufügen")
+        print("2. Einkaufsliste anzeigen")
+        print("3. Programm beenden")
+        choice = input("Was möchtest du tun?(1/2/3)")
+        if choice == "1":
+            add_item()
+        elif choice == "2":
+            show_shoppinglist()
+        elif choice == "3":
+            print("Programm wird beendet! Auf Wiedersehen")
+            break
+        elif choice:
+            print("Ungültige Auswahl. Bitte wähle 1,2 0der 3")
+if __name__ == "__main__":
+    main()
