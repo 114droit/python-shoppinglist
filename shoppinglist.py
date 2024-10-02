@@ -2,14 +2,13 @@
 shoppinglist = []
 
 # Funktion zum Hinzufügen eines Artikels
-item = input("Welcher Artikel soll der Einkaufsliste hinzugefügt werden?")
 def add_item():
+    item = input("Welcher Artikel soll der Einkaufsliste hinzugefügt werden?")
     if not item:
         print("Das kann nicht hinzugefügt werden")
     else:
         shoppinglist.append(item)
         print(item, "wurde der Einkaufsliste hinzugefügt")
-add_item()
 
 # Funktion zum Anzeigen der Einkaufsliste
 def show_shoppinglist():
@@ -19,4 +18,20 @@ def show_shoppinglist():
             print(item)
     else:
         print("Deine Einkaufsliste ist leer")
-show_shoppinglist()
+
+# Main Funktion
+while True:
+    print("\n")
+    print("-----Einkaufsliste-----")
+    print("1. Artikel zur Einkaufsliste hinzufügen")
+    print("2. Einkaufsliste anzeigen")
+    print("3. Programm beenden")
+    choice = int(input("Was möchtest du tun?(1/2/3)"))
+    if choice == 1:
+        add_item()
+    elif choice == 2:
+        show_shoppinglist()
+    elif choice == 3:
+        print("Programm wird beendet! Auf Wiedersehen")
+        break
+    
